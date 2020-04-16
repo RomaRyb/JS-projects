@@ -101,15 +101,56 @@ console.log(sumSquareDifference(8));
 // ==============================================================
 
 
-export default (str) => {
-    let acc = 0;
-    for (let i = 0; i < str.length; i++){
-        const symbol = str[i];
-        acc = symbol === '(' ? acc + 1 : acc - 1;
-        if(acc < 0) {
-            return false;
+// export default (str) => {
+//     let acc = 0;
+//     for (let i = 0; i < str.length; i++){
+//         const symbol = str[i];
+//         acc = symbol === '(' ? acc + 1 : acc - 1;
+//         if(acc < 0) {
+//             return false;
+//         }
+//     }
+//     return acc === 0;
+// };
+
+// ==============================================================
+//Реализуйте и экспортируйте по умолчанию функцию, которая выводит (console.log) в терминал числа в диапазоне от begin до end. При этом:
+// Если число делится без остатка на 3, то вместо него выводится слово Fizz
+// Если число делится без остатка на 5, то вместо него выводится слово Buzz
+// Если число делится без остатка и на 3, и на 5, то вместо числа выводится слово FizzBuzz
+// В остальных случаях выводится само число
+const fizzBuzz = (begin, end) => {
+    if(begin > end){
+        return;
+    }
+    for (let i = begin; i <= end; i++){
+        if(i % 3 == 0 && i % 5 == 0){
+            console.log('fizzBuzz');
+        }else if(i % 3 == 0){
+            console.log('fizz');
+        }else if(i % 5 == 0){
+            console.log('buzz');
+        }else{
+            console.log(i);
         }
     }
-    return acc === 0;
+}
+//fizzBuzz(2, 8);
+
+
+// ==============================================================
+
+const isPowerOfThree = (n) => {
+    let pow = 1;
+
+    while (pow < n) {
+        pow *= 3;
+        if (pow > n){
+            return false;
+        }else if (pow === n){
+            return true;
+        }
+    }
 };
+console.log(isPowerOfThree(33));
 

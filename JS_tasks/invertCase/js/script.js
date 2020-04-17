@@ -154,3 +154,8 @@ const isPowerOfThree = (n) => {
 };
 console.log(isPowerOfThree(33));
 
+// ==============================================================
+let str = "somerandom";
+let result = str.split('').reverse().join('');
+console.log(result);
+

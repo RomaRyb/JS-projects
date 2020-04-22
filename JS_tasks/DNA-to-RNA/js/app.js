@@ -1,8 +1,20 @@
 // const button = document.querySelector('button');
 // const input = document.querySelector('.dna');
 
+// function foo (dnaToRna){
+//     let x = document.getElementsByTagName('input');
+//     document.getElementById('rna').innerHTML = '';
+//     for(var i=0;i<x.length;i++){
+//         document.getElementById("rna").innerHTML += x[i].value + "/";
+//     }
+    
+// }
 
-const dnaToRna = function(dna){
+//console.log(`result: ${dnaToRna('GCTA')}`);
+
+
+
+let dnaToRna = function(dna){
     let rna = '';
     if (dna === '') {
         return '';
@@ -17,10 +29,19 @@ const dnaToRna = function(dna){
         }else if(dna[i] === 'A'){
             rna += 'U';
         }
-        else null;
+        else{
+            return null;
+        } 
     };
 
     return rna;
 };
 
-console.log(`result: ${dnaToRna('GCTA')}`);
+console.log(`result: ${dnaToRna('GCTAGGCAT')}`);
+
+
+//================================================================= 2
+
+
+
+
